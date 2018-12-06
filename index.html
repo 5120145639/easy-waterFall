@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>easy-waterFall</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./easy-waterFall.js"></script>
+</head>
+<body>
+    <div id="waterfall">
+        <!-- <div class="pin">
+            <img src="img/1.jpeg">
+            <p class="description">文字</p>
+        </div>
+        <div class="pin">
+            <img src="img/2.jpeg">
+            <p class="description">文字</p>
+        </div>
+        <div class="pin">
+            <img src="img/3.jpeg">
+            <p class="description">文字</p>
+        </div>
+        <div class="pin">
+            <img src="img/4.jpeg">
+            <p class="description">文字</p>
+        </div>
+        <div class="pin">
+            <img src="img/5.jpeg">
+            <p class="description">文字</p>
+        </div>
+        <div class="pin">
+            <img src="img/6.jpeg">
+            <p class="description">文字</p>
+        </div>
+        <div class="pin">
+            <img src="img/7.jpeg">
+            <p class="description">文字</p>
+        </div>
+        <div class="pin">
+            <img src="img/8.jpeg">
+            <p class="description">文字</p>
+        </div>
+        <div class="pin">
+            <img src="img/9.jpeg">
+            <p class="description">文字</p>
+        </div> -->
+    </div>
+    <div id="loader"></div>
+    <script>
+        let options = {
+            container: '#waterfall',
+            pins: ".pin",
+            loader: '#loader',
+            gapHeight: 20,
+            gapWidth: 20,
+            pinWidth: 216,
+            threshold: 100
+        }
+        let waterfall = new WaterFall(options)
+        waterfall.on('load', () => {
+            let arr = []
+            let str = ''
+            for (let i = 0; i < 10; i++) {
+                str = `<div class="pin"><img src="./img/${Math.ceil(Math.random() * 18)}.jpeg" class="img"><p class="description">图片${Math.ceil(Math.random() * 18)}</p></div>`
+                arr.push(str)
+            }
+            setTimeout(() => {
+                waterfall.append(arr.join(''), '.img')
+            }, 17)
+        })
+    </script>
+</body>
+</html>

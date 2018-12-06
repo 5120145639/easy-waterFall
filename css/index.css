@@ -1,0 +1,37 @@
+@import 'reset.css';
+html {
+    background-color: #edeced;
+}
+body {
+    font-family: 'helvetica neue', arial, sans-serif;
+    font-size: 14px;
+    color: #444;
+    overflow-x: hidden;
+}
+#waterfall{
+    /* position: relative; */
+    min-height: 500px;
+    margin: 16px auto 0;
+    background-color: #efece9;
+}
+.pin {
+    position: absolute;
+    width: 216px;
+    font-size: 12px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,.3);
+    transition: all .4s ease-in-out;
+}
+.pin img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+.pin .description {
+    display: block;
+    padding: 0 16px;
+    margin: 10px 0;
+    line-height: 1.35em;
+    overflow: hidden;
+    word-wrap: break-word;
+}
